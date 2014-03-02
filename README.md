@@ -21,5 +21,7 @@ generate-ninja-vc12.bat.
 
 ## Ninja and Clang
 
-Coming soon!
+Currently expects LLVM for Windows to be installed in C:\Program Files (x86)\LLVM.
+Running generate-ninja-clang.bat will generate a build but it will not compile
+the application at the moment.
 
