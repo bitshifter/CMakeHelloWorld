@@ -8,6 +8,7 @@ PROJECT(CMakeMFCApp)
 INCLUDE(PrecompiledHeader)
 
 SET( CMAKE_MFC_FLAG 2 ) # 2 = MFC as a DLL
+ADD_DEFINITIONS( -D_AFXDLL )
 
 SET(SRCS
   CMakeMFCApp.cpp
