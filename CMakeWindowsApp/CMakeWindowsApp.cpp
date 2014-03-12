@@ -1,8 +1,8 @@
-// CMakeHelloWorld.cpp : Defines the entry point for the application.
+// CMakeWindowsApp.cpp : Defines the entry point for the application.
 //
 
 #include "stdafx.h"
-#include "CMakeHelloWorld.h"
+#include "CMakeWindowsApp.h"
 
 #define MAX_LOADSTRING 100
 
@@ -31,7 +31,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 	// Initialize global strings
 	LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-	LoadString(hInstance, IDC_CMAKEHELLOWORLD, szWindowClass, MAX_LOADSTRING);
+	LoadString(hInstance, IDC_CMAKEWINDOWSAPP, szWindowClass, MAX_LOADSTRING);
 	MyRegisterClass(hInstance);
 
 	// Perform application initialization:
@@ -40,7 +40,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 		return FALSE;
 	}
 
-	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_CMAKEHELLOWORLD));
+	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_CMAKEWINDOWSAPP));
 
 	// Main message loop:
 	while (GetMessage(&msg, NULL, 0, 0))
@@ -73,10 +73,10 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 	wcex.cbClsExtra		= 0;
 	wcex.cbWndExtra		= 0;
 	wcex.hInstance		= hInstance;
-	wcex.hIcon			= LoadIcon(hInstance, MAKEINTRESOURCE(IDI_CMAKEHELLOWORLD));
+	wcex.hIcon			= LoadIcon(hInstance, MAKEINTRESOURCE(IDI_CMAKEWINDOWSAPP));
 	wcex.hCursor		= LoadCursor(NULL, IDC_ARROW);
 	wcex.hbrBackground	= (HBRUSH)(COLOR_WINDOW+1);
-	wcex.lpszMenuName	= MAKEINTRESOURCE(IDC_CMAKEHELLOWORLD);
+	wcex.lpszMenuName	= MAKEINTRESOURCE(IDC_CMAKEWINDOWSAPP);
 	wcex.lpszClassName	= szWindowClass;
 	wcex.hIconSm		= LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
